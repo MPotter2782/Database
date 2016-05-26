@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $(".tablinks1").click(function(){
+        $("#Add").toggle();
+    });
+	    $(".tablinks2").click(function(){
+        $("#Modify").toggle();
+    });
+	    $(".tablinks3").click(function(){
+        $("#View").toggle();
+    });
+	    $(".tablinks4").click(function(){
+        $("#Click 3").toggle();
+    });
+});
+</script>
+<div class="container">
+ <div class="row">
+  <div class="select">
+    <div class="col-lg-12 col-md-12">
+      <h1>Welcome to the inventory database!</h1>
+	</div>
+	<div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
+      <h3>Please select what you would like to do!</h3>
+	</div>
+  </div>
+  <div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1">
+    <div class="home">
+  	  <a href="main.html"><button type="button" class="btn btn-info btn-lg">Home!</button></a>
+    </div>
+  </div>
+ </div>
+</div>
+ 
+<div class="buttons">
+  <ul class="tab">
+	<li><a href="#" class="tablinks1">Add!</a></li>
+	<li><a href="#" class="tablinks2">Modify!</a></li>
+	<li><a href="#" class="tablinks3">View!</a></li>
+	<li><a href="#" class="tablinks4">Click Me!</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <div id="Add" class="tabcontent">
+	<h3>Looking to add?</h3>
+	<p><a href="add.html" id="dropdownlink">Click here</a> to be taken to a page in which you can add items to your inventory database!</p>
+  </div>
+
+  <div id="Modify" class="tabcontent">
+	<h3>Want to modify?</h3>
+	<p><a href="#" id="dropdownlink">Click here</a> to add or subtract the quantity of items!</p>
+  </div>
+
+  <div id="View" class="tabcontent">
+	<h3>See the inventory!</h3>
+	<p><a href="view.html" id="dropdownlink">Click here</a> to see the most up to date inventory list!</p>
+  </div>
+
+  <div id="Click 3" class="tabcontent">
+
+  </div>
+</div>
+
+<hr>  
+<div class="view" id="search">
+  <input type="submit" name="search" value="Search"> <input type="text">
+</div>
+
+<?php
+
+require_once("../connect.php")
+
+$query = "SELECT part_number, name FROM part_name SELECT type FROM part_type";
+
+$response = @mysqli_query($dbc, $query);
+if($response){
+	echo '<table align="left"
+	cellspacing="5" cellpadding="8">
+
+	<tr>
+      <td align="left"><b>Part Number</b></td>
+	  <td align="left"><b>Part Name</b></td>
+	  <td align="left"><b>Part Type</b></td>
+	  <td align="left"><b>Quantity</b></td>
+    </tr>';
+	
+	while($row = mysqli_fetch_array($response)){
+		echo '<tr><td align="left">'.
+		$row[part_number].
+		$row[name].
+		$row[type].
+		$row[quantity];
+		
+		echo"</tr>";
+	}
+	echo"</table>";
+
+}	else{
+
+		echo "Couldn't issue database query";
+		
+		echo mysqli_error($dbc);
+	
+}
+
+mysqli_close($dbc);
+
+?>
+</body>
+</html>
