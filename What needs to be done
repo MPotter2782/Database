@@ -1,0 +1,10 @@
+Things that need to be worked on for the database:
+
+Create the actual database
+--> Different tables
+   -->Part types
+   -->Part names
+
+Connect the database to the html using PHP
+
+Allow the database to be manipulated from the html/PHP
