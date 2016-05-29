@@ -78,28 +78,20 @@ $(document).ready(function(){
 
 <?php
 
-require_once("../connect.php")
+require_once("../connect.php");
 
-$query = "SELECT part_number, name FROM part_name SELECT type FROM part_type";
+$query = "SELECT name FROM part_type";
 
 $response = @mysqli_query($dbc, $query);
 if($response){
 	echo '<table align="left"
 	cellspacing="5" cellpadding="8">
 
-	<tr>
-      <td align="left"><b>Part Number</b></td>
-	  <td align="left"><b>Part Name</b></td>
-	  <td align="left"><b>Part Type</b></td>
-	  <td align="left"><b>Quantity</b></td>
-    </tr>';
+	<tr><td align="left"><b>Part Type</b></td></tr>';
 	
 	while($row = mysqli_fetch_array($response)){
 		echo '<tr><td align="left">'.
-		$row[part_number].
-		$row[name].
-		$row[type].
-		$row[quantity];
+		$row['name'] . '</td><td align="left">';
 		
 		echo"</tr>";
 	}

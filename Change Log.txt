@@ -1,0 +1,8 @@
+Change log
+
+5-28-2016
+-Added change log
+-modified view.html in attempts to get a basic connection with mysql
+-- set it up so it would only have to fetch one thing to see if it works.  Still haven't gotten it to work =(
+-started to set up a super simple database
+-made document detailing how to set up the database
