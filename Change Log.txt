@@ -6,3 +6,6 @@ Change log
 -- set it up so it would only have to fetch one thing to see if it works.  Still haven't gotten it to work =(
 -started to set up a super simple database
 -made document detailing how to set up the database
+
+5-29-2016
+-Changed DB_USER to admin and DB_PASSWORD to Password
