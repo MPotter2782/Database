@@ -6,23 +6,9 @@
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script>
+<script src="../javascript/tabs.js"></script>
 
-$(document).ready(function(){
-    $(".tablinks1").click(function(){
-        $("#Add").toggle();
-    });
-	    $(".tablinks2").click(function(){
-        $("#Modify").toggle();
-    });
-	    $(".tablinks3").click(function(){
-        $("#View").toggle();
-    });
-	    $(".tablinks4").click(function(){
-        $("#Click 3").toggle();
-    });
-});
-</script>
+
 <div class="container">
  <div class="row">
   <div class="select">
@@ -43,10 +29,10 @@ $(document).ready(function(){
  
 <div class="buttons">
   <ul class="tab">
-	<li><a href="#" class="tablinks1">Add!</a></li>
-	<li><a href="#" class="tablinks2">Modify!</a></li>
-	<li><a href="#" class="tablinks3">View!</a></li>
-	<li><a href="#" class="tablinks4">Click Me!</a></li>
+	<li><a href="#" class="tablinks" onclick="openClose('Add')">Add!</a></li>
+	<li><a href="#" class="tablinks" onclick="openClose('Modify')">Modify!</a></li>
+	<li><a href="#" class="tablinks" onclick="openClose('View')">View!</a></li>
+	<li><a href="#" class="tablinks">Click Me!</a></li>
   </ul>
 </div>
 

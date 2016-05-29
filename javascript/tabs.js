@@ -1,11 +1,13 @@
-function openCity(evt, cityName) {
+function openClose(tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+		//We handle visibility of working block later, so don't touch for now
+		if (!(document.getElementById(tabName).style.display == "block"))
+			tabcontent[i].style.display = "none";
     }
 
     // Get all elements with class="tablinks" and remove the class "active"
@@ -14,7 +16,13 @@ function openCity(evt, cityName) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+    // Toggle working block.
+	if (document.getElementById(tabName).style.display == "none") {
+		document.getElementById(tabName).style.display = "block";
+		this.className += " active";
+	} else {
+		document.getElementById(tabName).style.display = "none";
+		this.className.replace(" active", "");
+	}
+
 }
