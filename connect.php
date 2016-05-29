@@ -1,7 +1,7 @@
 <?php
 
-DEFINE("DB_USER","root");
-DEFINE("DB_PASSWORD","AnimE9009");
+DEFINE("DB_USER","admin");
+DEFINE("DB_PASSWORD","Password");
 DEFINE("DB_HOST","localhost");
 DEFINE("DB_NAME","inventory");
 
