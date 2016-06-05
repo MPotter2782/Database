@@ -9,3 +9,11 @@ Change log
 
 5-29-2016
 -Changed DB_USER to admin and DB_PASSWORD to Password
+
+6-5-2016
+-Switched from the initial plan of using PHP to looking into RoR
+-Started working with RoR to recreate the navigation between the pages
+-Added the header.html code to application.html.erb.  This can be used for adjustments needed across multiple pages.
+-Brought over any and all html, css and js.
+-- Backed up these files just in case, but otherwise removed them from the project as they're located elsewhere.
+

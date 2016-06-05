@@ -1,0 +1,28 @@
+function openClose(tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        //We handle visibility of working block later, so don't touch for now
+        if (!(document.getElementById(tabName).style.display == "block"))
+            tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Toggle working block.
+    if (document.getElementById(tabName).style.display == "none") {
+        document.getElementById(tabName).style.display = "block";
+        this.className += " active";
+    } else {
+        document.getElementById(tabName).style.display = "none";
+        this.className.replace(" active", "");
+    }
+
+}

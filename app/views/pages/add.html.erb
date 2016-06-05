@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Database</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+	  <div class=form>
+		<form action="#" method="post">
+		  <h3>Please enter the information for the part you would like to add into the database!</h3><br>
+		  Name: <input type="text" name="name"><br><br>
+		  Type: 
+			<select name="parts">
+			<option value="pn1">Part name 1</option>
+			<option value="pn2">Part name 2</option>
+			<option value="pn3">Part name 3</option>
+			<option value="pn4">Part name 4</option>
+			</select><br><br>
+		  <input type="submit" name="submit" value="Submit">
+		</form>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+</body>
+</html>
