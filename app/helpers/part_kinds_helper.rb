@@ -1,0 +1,2 @@
+module PartKindsHelper
+end

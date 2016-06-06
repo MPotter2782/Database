@@ -16,4 +16,6 @@ Change log
 -Added the header.html code to application.html.erb.  This can be used for adjustments needed across multiple pages.
 -Brought over any and all html, css and js.
 -- Backed up these files just in case, but otherwise removed them from the project as they're located elsewhere.
+-worked on creating a working connection between the page and the database
+--WE DID IT, BOYS!  A connection was made and we are now able to add parts from the page itself into the database.
 
