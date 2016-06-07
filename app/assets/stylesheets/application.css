@@ -21,6 +21,10 @@ body {
 	background-color: #A8FFA2;
 }
 
+a:hover {
+	background-color: transparent;
+}
+
 
 /* ---------Tabs!---------*/
 ul.tab {
@@ -102,6 +106,11 @@ a#dropdownlink {
 	padding-right: 20px;
 }
 
+.form h1 {
+	color: white;
+	text-align: center;
+}
+
 .form {
 	border: 3px solid white;
 	background-color: #33C4FF;
@@ -112,6 +121,34 @@ input[name=submit] {
 	right: -85%;
 	bottom: 10px;
     position: relative;
+}
+
+#back {
+	position: relative;
+	right: -90%;
+	color: white;
+	font-size: 25px;
+}
+
+#back:hover {
+	color: #0c5f2f;
+}
+
+.field {
+	margin-left: 20px;
+	color: white;
+}
+
+input#part_kind_kind {
+	color: black;
+}
+
+.actions {
+	margin-left: 20px;
+}
+
+input#part_name_Name, input#part_name_part_kinds_id {
+	color: black;
 }
 
 /* ---------View!---------*/
@@ -125,6 +162,36 @@ input[name=search] {
 	position: relative;
 	float: right;
 	right: 5%
+}
+
+ table, td, th {
+    border: 2px solid white;
+    color: black;
+}
+
+th {
+	font-size: 20px;
+}
+
+td {
+	font-size: 15px;
+}
+
+td, th {
+	padding: 10px;
+}
+
+table {
+	margin-left: 20px;
+	text-align: center;
+}
+
+#view {
+	color: #001a39;
+}
+
+#view:hover {
+	color: #0c5f2f;
 }
 
 /* ---------Footer/Close!---------*/

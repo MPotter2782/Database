@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
+  resources :part_names
   resources :part_kinds
-  resources :part_types
-  resources :part_types
-  get 'pages/add'
   get 'welcome/index'
   
   match ':controller(/:action(/:id))', :via => :get

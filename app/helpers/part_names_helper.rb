@@ -1,0 +1,2 @@
+module PartNamesHelper
+end
