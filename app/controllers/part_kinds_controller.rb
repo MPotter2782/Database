@@ -7,6 +7,10 @@ class PartKindsController < ApplicationController
     @part_kinds = PartKind.all
   end
 
+  def new
+    @part_names = PartNames.new
+  end
+
   # GET /part_kinds/1
   # GET /part_kinds/1.json
   def show
@@ -72,3 +76,5 @@ class PartKindsController < ApplicationController
       params.require(:part_kind).permit(:kind)
     end
 end
+
+

@@ -5,6 +5,25 @@
   <%= @part_kind.kind %>
 </p>
 
+<h3>New Part Name</h1>
+
+
+<%= form_for PartNames.new do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+
+
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+
 
 <%= link_to 'Edit', edit_part_kind_path(@part_kind) %> |
 <%= link_to 'Back', part_kinds_path %>

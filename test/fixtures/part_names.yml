@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  part_kinds_id: 1
+  quantity: 1
+  part_kind_id: 
 
 two:
   name: MyString
-  part_kinds_id: 1
+  quantity: 1
+  part_kind_id: 
