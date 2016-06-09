@@ -69,6 +69,6 @@ class PartNamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def part_name_params
-      params.require(:part_name).permit(:name, :part-type_id)
+      params.require(:part_name).permit(:name, :part_kinds_id)
     end
 end

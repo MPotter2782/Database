@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  part-type_id: 1
+  part_kinds_id: 1
 
 two:
   name: MyString
-  part-type_id: 1
+  part_kinds_id: 1

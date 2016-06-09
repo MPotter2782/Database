@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606233157) do
+ActiveRecord::Schema.define(version: 20160607160516) do
 
   create_table "part_kinds", force: :cascade do |t|
     t.string   "kind",       limit: 255
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20160606233157) do
 
   create_table "part_names", force: :cascade do |t|
     t.string   "name",          limit: 255
-    t.integer  "part_types_id", limit: 4
+    t.integer  "part_kinds_id", limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end

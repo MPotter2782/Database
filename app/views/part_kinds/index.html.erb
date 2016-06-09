@@ -31,6 +31,9 @@
         <td><%= part_kind.kind %></td>
         <td><%= part_kind.kind %></td>
       </tr>
+              <td><%= link_to 'Show', part_kind %></td>
+        <td><%= link_to 'Edit', edit_part_kind_path(part_kind) %></td>
+        <td><%= link_to 'Destroy', part_kind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </tbody>
 </table>

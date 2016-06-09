@@ -19,3 +19,9 @@ Change log
 -worked on creating a working connection between the page and the database
 --WE DID IT, BOYS!  A connection was made and we are now able to add parts from the page itself into the database.
 
+6-9-2016
+-Added a second table for Database
+-Linked pages together (All you should have to do is rake db:migrate in your terminal and you should be golden)
+-started making things look a little nicer
+-started contemplating how the view of the tables would look
+-attempted to start hooking the two tables up together
