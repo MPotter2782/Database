@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :categories
   resources :part_kinds do
-      resources :part_names
+      resources :part_name
     end 
   get 'welcome/index'
   

@@ -1,2 +1,0 @@
-module PartNameHelper
-end
