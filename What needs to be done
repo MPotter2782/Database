@@ -11,8 +11,9 @@ Things that need to be worked on for the database:
 >Implement and add the ability to manipulate the amount of each item.
 =>For example, I have 50 screws, then I use 5 of them.  I need to update the information so it reflects that I now only have 45
 
->Link the part_kinds table and the part_names table so that we can associate each name with a type
-=>I've started working on this and will probably continue working on this in particular - MP
+>Change the randome bit of text that displays on the show page for no reason.
 
 >Investiage the best way to host the server so it is something many people can access instead of having to make updates based on computer
 =>I asked Dave, the guy from WIT, if he had any suggestions about this.  He said we can host it from an IP for no cost so we will see.
+
+Connect form on the show page to actually submit data to mysql

@@ -3,9 +3,9 @@
 one:
   name: MyString
   quantity: 1
-  categories_id: 
+  category_id: 
 
 two:
   name: MyString
   quantity: 1
-  categories_id: 
+  category_id: 

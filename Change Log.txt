@@ -25,3 +25,10 @@ Change log
 -started making things look a little nicer
 -started contemplating how the view of the tables would look
 -attempted to start hooking the two tables up together
+6-9-2016 (second push)
+-changed part_kinds to category
+-changed part_names to entry
+-set up working link between the two tables in mysql
+-successfully displayed information from mysql on "show" page
+-Styled some things up to look a little more presentable
+-updated what needs to be done

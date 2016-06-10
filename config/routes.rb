@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :categories
-  resources :part_kinds do
-      resources :part_name
-    end 
+  resources :categories do
+    resources :entries
+  end
+  
   get 'welcome/index'
   
   match ':controller(/:action(/:id))', :via => :get
