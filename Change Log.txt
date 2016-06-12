@@ -8,7 +8,7 @@ Change log
 -made document detailing how to set up the database
 
 5-29-2016
--Changed DB_USER to admin and DB_PASSWORD to Password
+-Changed DB_USER to admin and DB_PASSWORD to password
 
 6-5-2016
 -Switched from the initial plan of using PHP to looking into RoR
@@ -32,3 +32,10 @@ Change log
 -successfully displayed information from mysql on "show" page
 -Styled some things up to look a little more presentable
 -updated what needs to be done
+
+6-11-2016
+-Got rid of jankey text that was showing up on show page
+-FINALLY got "Create Entry" option to work so that information can be added to the second table
+-Created partial for _entry form so it can be used on multiple pages
+-Set up ability to delete categories and any related entries from database through page
+-changed presentation of entries into a table format for the moment until a better layout is created

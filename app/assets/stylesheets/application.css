@@ -104,6 +104,7 @@ a#dropdownlink {
 	color: white;
 	padding-left: 50px;
 	padding-right: 50px;
+	text-align: center;
 }
 
 .form h2 {
@@ -161,10 +162,14 @@ input[name=submit] {
 .field {
 	margin-left: 20px;
 	color: white;
+	position: relative;
+	left: 40%;
 }
 
 .actions {
 	margin-left: 20px;
+	position: relative;
+	left: 40%;
 }
 
 input#entry_name, input#entry_quantity {
@@ -211,7 +216,8 @@ td, th {
 }
 
 table {
-	margin-left: 20px;
+	position: relative;
+	left: 34%;
 	text-align: center;
 }
 

@@ -11,21 +11,26 @@
 </h2>
 
 <h3>Part Name</h3>
-<%= @category.entry.each do |entry| %>
 
 <div class="response">
-<p>
-  <strong>Part Name:</strong>
-  <%= entry.name %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Amount:</strong>
-  <%= entry.quantity %>
-</p>
+    <tbody>
+    <% @category.entries.each do |entry| %>
+      <tr>
+        <td><%= entry.name %></td>
+        <td><%= entry.quantity %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>
-
-<% end %>
 
 <div class="row">
   <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
@@ -38,22 +43,7 @@
 <h3>Add a Part!</h3>
 
 <div class="field">
-<%= form_for([@category,@category.entry.build]) do |f| %>
-  <p>
-  	<%= f.label :name %><br />
-  	<%= f.text_field :name %>
-  </p>
-
-  <p>
-  	<%= f.label :quantity %><br />
-  	<%= f.text_field :quantity %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %>
+<%= render 'entry' %>
 </div>
 
       </div>

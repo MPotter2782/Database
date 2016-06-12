@@ -2,18 +2,13 @@ Things that need to be worked on for the database:
 
 >Continue to make things look presentable
 
->Link up different pages for differe types of parts
-=>Create those pages so that they can each be linked up
-
 >Create a button that submits information to different tables depending on what is selected from a drop down menu
-=>For example, if I want to put in a specific screw, I want to choose screw from a menu and then type in the name of the screw.  That name then only populates a certain table
+=>For example, if I want to put in a specific screw, I want to choose screw from a menu and then type in the name of the screw.  That name then only populates a certain table 
+==>(I guess technically this is done, as there's a table in which you can access each category, click on show and see the contents)
 
 >Implement and add the ability to manipulate the amount of each item.
 =>For example, I have 50 screws, then I use 5 of them.  I need to update the information so it reflects that I now only have 45
 
->Change the randome bit of text that displays on the show page for no reason.
-
 >Investiage the best way to host the server so it is something many people can access instead of having to make updates based on computer
 =>I asked Dave, the guy from WIT, if he had any suggestions about this.  He said we can host it from an IP for no cost so we will see.
 
-Connect form on the show page to actually submit data to mysql
