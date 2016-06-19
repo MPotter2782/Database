@@ -37,7 +37,8 @@
 <div class="dropdown">
   <div id="Add" class="tabcontent">
 	<h3>Looking to add?</h3>
-	<p><a href="../categories/new" id="dropdownlink">Click here</a> to be taken to a page in which you can add items to your inventory database!</p>
+	<p>
+  <%= link_to "Click here", new_category_path(@categories), :id => 'tabs' %> to be taken to a page in which you can add items to your inventory database!</p>
   </div>
 
   <div id="Modify" class="tabcontent">

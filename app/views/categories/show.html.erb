@@ -26,6 +26,7 @@
       <tr>
         <td><%= entry.name %></td>
         <td><%= entry.quantity %></td>
+        <td><%= link_to 'Edit', category_entry_path(@category, entry), :method => :put %></td>
       </tr>
     <% end %>
   </tbody>

@@ -12,8 +12,26 @@ class EntriesController < ApplicationController
 		redirect_to category_path(@category)
 	end
 
-	private
-		def entry_params
-			params.require(:entry).permit(:name, :quantity)
+	def edit
+		@category = Category.find(params[:category_id])
+		@entry = @category.entries.find(params[:id])
+	end
+
+	def update
+		@category = Category.find(params[:category_id])
+		@entry = @category.entries.find(params[:id])
+
+		if @entry.update(entry_params)
+		redirect_to category_path(@category)
+	    else 
+	    	render 'entry'
 		end
-end
+	end	
+
+
+	private
+
+	def entry_params
+		params.require(:entry).permit(:name, :quantity)
+	end
+ end
