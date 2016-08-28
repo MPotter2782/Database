@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 html {
 	background-color: #A8FFA2;
 }
@@ -164,12 +165,14 @@ input[name=submit] {
 	color: white;
 	position: relative;
 	left: 40%;
+	max-width: 500px;
 }
 
 .actions {
 	margin-left: 20px;
 	position: relative;
 	left: 40%;
+	max-width: 500px;
 }
 
 input#entry_name, input#entry_quantity {
@@ -177,7 +180,6 @@ input#entry_name, input#entry_quantity {
 }
 
 .response {
-	margin-left: 100px;
 	color: white;
 }
 
@@ -217,7 +219,6 @@ td, th {
 
 table {
 	position: relative;
-	left: 34%;
 	text-align: center;
 }
 
@@ -230,10 +231,20 @@ table {
 }
 
 /* ---------Footer/Close!---------*/
-close {
-	position: fixed;
-}
 
 hr {
 	border-top: 1px solid #00BEB1;
+}
+
+.footer {
+	background-color: #555555;
+	color: white;
+}
+
+#contact {
+	margin-top: 50px;
+}
+
+#contact li {
+	display: block;
 }

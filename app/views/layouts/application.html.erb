@@ -28,7 +28,6 @@
 <div class="buttons">
   <ul class="tab">
 	<li><a href="#" class="tablinks" onclick="openClose('Add')">Add!</a></li>
-	<li><a href="#" class="tablinks" onclick="openClose('Modify')">Modify!</a></li>
 	<li><a href="#" class="tablinks" onclick="openClose('View')">View!</a></li>
 	<li><a href="#" class="tablinks">Click Me!</a></li>
   </ul>
@@ -41,11 +40,6 @@
   <%= link_to "Click here", new_category_path(@categories), :id => 'tabs' %> to be taken to a page in which you can add items to your inventory database!</p>
   </div>
 
-  <div id="Modify" class="tabcontent">
-	<h3>Want to modify?</h3>
-	<p><a href="../categories" id="dropdownlink">Click here</a> to add or subtract the quantity of items!</p>
-  </div>
-
   <div id="View" class="tabcontent">
 	<h3>See the inventory!</h3>
 	<p><a href="../categories" id="dropdownlink">Click here</a> to see the most up to date inventory list!</p>
@@ -56,9 +50,33 @@
   </div>
 </div>
 
+<br><br>
+<%= yield %>
+
+<div class="footer">
+
 <hr>
 
-<%= yield %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3" id="contact">
+      <h4><strong>Contact Me:</strong></h4>
+      <ul>
+        <li><strong>Name: </strong>Melinda Potter</li>
+        <li><strong>Phone: </strong>(630)-379-9106</li>
+        <li><strong>Email: </strong>mpotter2782@gmail.com</li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-lg-offset-6">
+      <img src="http://i.imgur.com/ORVz7qR.png">
+    </div>
+  </div>
+</div>
+
+<br>
+
+</div>
 
 </body>
 </html>
