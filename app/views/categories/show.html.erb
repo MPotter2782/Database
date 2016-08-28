@@ -18,18 +18,22 @@
     <tr>
       <th>Name</th>
       <th>Quantity</th>
+      <th>Price</th>
+      <th>Edit</th>
     </tr>
   </thead>
 
-    <tbody>
+  <tbody>
     <% @category.entries.each do |entry| %>
       <tr>
         <td><%= entry.name %></td>
         <td><%= entry.quantity %></td>
-        <td><%= link_to 'Edit', category_entry_path(@category, entry), :method => :put %></td>
+        <td><%= entry.price %></td>
+        <td><%= link_to 'Edit', edit_category_entry_path(@category, entry) %></td>
       </tr>
     <% end %>
-  </tbody>
+</tbody>
+
 </table>
 </div>
 
@@ -43,9 +47,7 @@
 
 <h3>Add a Part!</h3>
 
-<div class="field">
-<%= render 'entry' %>
-</div>
+<%= render '/entries/form' %>
 
       </div>
     </div>

@@ -1,15 +1,21 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12 col-md-12">
-      <div class=form>
-
 <h1>Editing Entry</h1>
 
-<%= render 'entry' %>
+<%= form_for([@category, @entry]) do |f| %>
 
-<br /> <br />
 
-      </div>
-    </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
-</div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

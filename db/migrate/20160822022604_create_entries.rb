@@ -3,6 +3,7 @@ class CreateEntries < ActiveRecord::Migration
     create_table :entries do |t|
       t.string :name
       t.integer :quantity
+      t.decimal :price
       t.references :category, index: true, foreign_key: true
 
       t.timestamps null: false

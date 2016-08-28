@@ -3,9 +3,11 @@
 one:
   name: MyString
   quantity: 1
+  price: 9.99
   category_id: 
 
 two:
   name: MyString
   quantity: 1
+  price: 9.99
   category_id: 

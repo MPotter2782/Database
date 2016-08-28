@@ -1,0 +1,27 @@
+<% @category.entries.each do |entry| %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @entry.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @entry.quantity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @entry.price %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @entry.category %>
+</p>
+
+<%= link_to 'Edit', edit_category_entry_path(@category, @entry) %>
+
+<% end %>
