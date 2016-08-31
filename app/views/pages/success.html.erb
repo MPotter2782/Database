@@ -1,2 +1,10 @@
-<h1>success</h1>
-<%= link_to 'Show', @category, :id => 'show' %>
+<div class="success">
+	<h1>Success!</h1>
+	<h4>You have successfully updated the entry!</h4>
+  <br>
+	<h2>What would you like to do now?</h2>
+	<h4>
+	<%= link_to 'New Category', new_category_path, :id => 'success' %> |
+	<%= link_to 'View Categories', '/categories', :id => 'success' %>
+	</h4>
+</div>

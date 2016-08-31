@@ -15,11 +15,11 @@
  */
 
 html {
-	background-color: #A8FFA2;
+	background-color: #d1ffc8;
 }
 
 body {
-	background-color: #A8FFA2;
+	background-color: #d1ffc8;
 }
 
 a:hover {
@@ -247,4 +247,18 @@ hr {
 
 #contact li {
 	display: block;
+}
+
+/* ---------Success!---------*/
+
+.success {
+	text-align: center;
+}
+
+.success a {
+	color: #00bbc7;
+}
+
+.success a:hover {
+	color: #007d85;
 }
