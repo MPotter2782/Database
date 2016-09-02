@@ -23,7 +23,12 @@ body {
 }
 
 a:hover {
+	color: white;
 	background-color: transparent;
+}
+
+a:visited {
+	color: black;
 }
 
 
@@ -100,7 +105,42 @@ a#dropdownlink {
 	left: 2%
 }
 
-/* ---------Add!---------*/
+/* ---------Button links---------*/
+
+#back {
+	position: relative;
+	right: -90%;
+	color: white;
+	font-size: 25px;
+}
+
+#show {
+	position: absolute;
+	right: 90%;
+	color: white;
+	font-size: 25px;
+}
+
+#edit {
+	position: absolute;
+	right: 90%;
+	color: white;
+	font-size: 25px;
+}
+
+#new-category {
+	position: relative;
+	right: -80%;
+	color: white;
+	font-size: 25px;
+}
+
+#back:hover {
+	color: #0c5f2f;
+}
+
+/* ---------Forms and Information Displays!---------*/
+
 .form h3 {
 	color: white;
 	padding-left: 50px;
@@ -133,31 +173,6 @@ input[name=submit] {
 	right: -85%;
 	bottom: 10px;
     position: relative;
-}
-
-#back {
-	position: relative;
-	right: -90%;
-	color: white;
-	font-size: 25px;
-}
-
-#show {
-	position: absolute;
-	right: 90%;
-	color: white;
-	font-size: 25px;
-}
-
-#new-category {
-	position: relative;
-	right: -80%;
-	color: white;
-	font-size: 25px;
-}
-
-#back:hover {
-	color: #0c5f2f;
 }
 
 .field {
@@ -211,6 +226,7 @@ th {
 
 td {
 	font-size: 15px;
+	max-width: 500px;
 }
 
 td, th {
@@ -220,6 +236,21 @@ td, th {
 table {
 	position: relative;
 	text-align: center;
+	margin-left: 12%;
+}
+
+.response strong {
+	font-size: 15px;
+}
+
+.entry_show p {
+	color: black;
+}
+
+.response table {
+	position: relative;
+	text-align: center;
+	margin-left: 10%;
 }
 
 #view {

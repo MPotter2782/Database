@@ -1,6 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class=form>
+
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1">
+    <div class="response entry_show">
+
 <% @category.entries.each do |entry| %>
 
 <p id="notice"><%= notice %></p>
+
+<h2>
+  Part Name:
+  <%= @entry.name %>
+</h2>
+
+<br>
+
+<p>
+  <strong>Part Number:</strong>
+  <%= @entry.id %>
+</p>
 
 <p>
   <strong>Name:</strong>
@@ -14,14 +35,36 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @entry.price %>
+  <%= number_to_currency(@entry.price) %>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @entry.category %>
+  <strong>Price Marked Up:</strong>
+  <%= number_to_currency(entry.price*(0.30)+entry.price) %>
 </p>
 
-<%= link_to 'Edit', edit_category_entry_path(@category, @entry) %>
+<p>
+  <strong>Created On:</strong>
+  <%= @entry.created_at.strftime("%b %e, %Y @ %I:%M %p") %>
+</p>
+
+<p>
+  <strong>Last Updated On:</strong>
+  <%= @entry.updated_at.strftime("%b %e, %Y @ %I:%M %p") %>
+</p>
+
+<br>
+
+<%= link_to 'Edit', edit_category_path(@category), :id => 'edit' %>
+<%= link_to 'Back', category_path, :id => 'back' %>
 
 <% end %>
+
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>

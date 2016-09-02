@@ -10,6 +10,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
+    @category = Category.find(params[:category_id])
   end
 
   # GET /entries/new
@@ -35,7 +36,7 @@ class EntriesController < ApplicationController
   def update
     @entry = Entry.find(params[:id])
     if @entry.update_attributes(entry_params)
-      redirect_to '/pages/success'
+      redirect_to category_path
       # Handle a successful update.
     else
       render 'edit'

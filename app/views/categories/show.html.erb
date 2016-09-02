@@ -8,18 +8,21 @@
   <%= @category.kind %>
 </h2>
 
-<div class="row">
-  <div class="col-lg-4 col-lg-offset-4">
-<h3>Part Name</h3>
+<br> <br>
 
-<div class="response">
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1">
+    <div class="response">
+
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Quantity</th>
       <th>Price</th>
+      <th>Adjusted Price</th>
       <th>Edit</th>
+      <th>More Information</th>
     </tr>
   </thead>
 
@@ -28,8 +31,10 @@
       <tr>
         <td><%= entry.name %></td>
         <td><%= entry.quantity %></td>
-        <td><%= entry.price %></td>
+        <td><%= number_to_currency(entry.price) %></td>
+        <td><%= number_to_currency(entry.price*(0.30)+entry.price) %></td>
         <td><%= link_to 'Edit', edit_category_entry_path(@category, entry) %></td>
+        <td><%= link_to 'Show', category_entry_path(@category, entry) %></td>
       </tr>
     <% end %>
 </tbody>
@@ -39,6 +44,7 @@
 </div>
 </div>
 
+<br>
 
 <div class="row">
   <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
@@ -52,11 +58,12 @@
 
 <%= render '/entries/form' %>
 
+<br>
+
+<%= link_to 'Edit', edit_category_path(@category), :id => 'edit' %>
+<%= link_to 'Back', categories_path, :id => 'back' %>
+
       </div>
     </div>
   </div>
 </div>
-
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
