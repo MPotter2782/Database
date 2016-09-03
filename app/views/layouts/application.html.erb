@@ -19,7 +19,7 @@
   </div>
   <div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1">
     <div class="home">
-  	  <a href="../welcome/index"><button type="button" class="btn btn-info btn-lg">Home!</button></a>
+  	  <%= link_to "Home", welcome_index_path, :class => 'btn btn-info btn-lg' %>
     </div>
   </div>
  </div>
@@ -41,7 +41,7 @@
 
   <div id="View" class="tabcontent">
 	<h3>See the inventory!</h3>
-	<p><a href="../categories" id="dropdownlink">Click here</a> to see the most up to date inventory list!</p>
+	<p><%= link_to "Click here", categories_path, :id => 'tabs' %> to see the most up to date inventory list!</p>
   </div>
 
   </div>
