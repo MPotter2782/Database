@@ -7,7 +7,7 @@
   <div class="col-lg-10 col-lg-offset-1">
     <div class="response entry_show">
 
-<% @category.entries.each do |entry| %>
+<% category_entry_path(@category, @entry) %>
 
 <p id="notice"><%= notice %></p>
 
@@ -20,7 +20,7 @@
 
 <p>
   <strong>Part Number:</strong>
-  <%= @entry.id %>
+  <%= @category.id %> - <%= @entry.id %>
 </p>
 
 <p>
@@ -40,7 +40,7 @@
 
 <p>
   <strong>Price Marked Up:</strong>
-  <%= number_to_currency(entry.price*(0.30)+entry.price) %>
+  <%= number_to_currency(@entry.price*(0.30)+@entry.price) %>
 </p>
 
 <p>
@@ -55,10 +55,8 @@
 
 <br>
 
-<%= link_to 'Edit', edit_category_entry_path(@category, entry), :id => 'edit' %>
-<%= link_to 'Back', category_path, :id => 'back' %>
-
-<% end %>
+<%= link_to 'Edit', edit_category_entry_path(@category, @entry), :id => 'edit' %>
+<%= link_to 'Back', category_path(@category), :id => 'back' %>
 
     </div>
   </div>
